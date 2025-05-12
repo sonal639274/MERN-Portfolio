@@ -9,7 +9,7 @@ import ManageProjects from "./pages/ManageProjects";
 import ManageClientProjects from "./pages/ManageClientProjects";
 import UpdateProject from "./pages/UpdateProject";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import React,{ useEffect } from "react";
 import { getUser } from "./store/slices/userSlice";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
@@ -27,7 +27,7 @@ function App() {
     dispatch(getAllMessages());
     dispatch(getAllProjects());
     dispatch(getAllClientProjects());
-  }, []);
+  }, [dispatch]);
   return (
     <Router>
       <Routes>
